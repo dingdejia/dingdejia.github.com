@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset='utf-8' />
+	<meta charset="utf-8"/>
 	<meta http-equiv="X-UA-Compatible" content="chrome=1" />
 	<meta name="description" content="FateCoder.com : ÃüÔË±àÐ´Õß" />
 	<link rel="Bookmark" type="image/x-icon" href="../favicon.ico" />
@@ -13,46 +13,67 @@
 	<style type="text/css">
 		body
 		{
-			margin: 0px;
-			padding: 0px;
-			text-align: center;
-			display: block;
+			margin: 0px; 
+			padding: 0; 
+			border:0;
+			text-align: center;			
 		}
-		#menu ul li
+		.divBlackHead
 		{
-			font-size: 16px;
-		}
+			background-color: Black; 
+			color:White;
+			width: 100%; 
+			height: 80px; 
+			margin: 0px; 
+			padding: 0;
+			text-align: center;			
+			}
+		h1
+		{
+			margin:0;
+			padding:5px;
+			}
+		.divBody
+		{
+			width: 640px; 
+			margin: 0 auto;
+			padding:0;
+			}
+		.divMenu
+		{
+			position: absolute; 
+			width: 160px; 
+			height: 220px;
+			background-color:White;
+			border: 3px solid black;
+			display:none;
+			}
 	</style>
 </head>
 <body>
-	<div style="width: 820px; display: block; text-align: center; margin: 0px auto;">
-		<table>
-			<tr>
-				<td style="width: 180px; vertical-align: top">
-					<table>
-						<tr>
-							<td>
-								<b>HTML5</b>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div id="menu">
-									<ul>
-										<li  onclick="menuClick(this)" title="Umbrella">Umbrella</li>
-										<li  onclick="menuClick(this)" title="Tetris">Tetris</li>
-									</ul>
-								</div>
-							</td>
-						</tr>
-					</table>
-				</td>
-				<td style="width: 640px">
-					<iframe id="iframe" frameborder="0" scrolling="no" width="640px" height="670px" src="Umbrella.html">
-					</iframe>
-				</td>
-			</tr>
-		</table>
+	<div class="divBlackHead">
+		<div class="divBody">
+			<h1>HTML5</h1>
+			<span id="sharp" tabindex="0" hidefocus="true" onfocus="showMenu(this)" onblur="hideMenu(this)"
+					style="float: right;outline:0; padding:2px; color: #FFFFFF;">&lt;&lt;&nbsp;more</sapn>
+		</div>
 	</div>
+	<div class="divBody">
+		<iframe id="iframe" frameborder="0" style="width: 640px;height: 620px;margin:0;padding:0;" scrolling="no" src="Umbrella.html"></iframe>		
+	</div>
+	<div id="divMenu" class="divMenu">
+				<table style="width: 100%;cursor:pointer;">
+					<tr>
+						<td onmouseover="menuOn(this)" onmouseout="menuOff(this)" onmousedown="menuClick(this)" title="Umbrella" >							
+							Umbrella
+						</td>
+					</tr>
+					<tr>
+						<td onmouseover="menuOn(this)" onmouseout="menuOff(this)"  onmousedown="menuClick(this)" title="Tetris">
+							Tetris							
+						</td>
+					</tr>
+				</table>
+			</div>
 </body>
 </html>

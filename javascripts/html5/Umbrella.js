@@ -1,8 +1,11 @@
 ﻿$(function () {
 	var canvas = document.getElementById('canvasUmbrella');
 	var ctx = canvas.getContext('2d');
-	ctx.fillStyle = '#DDDDFF';
+	ctx.fillStyle = '#FFFFFF';
 	ctx.fillRect(0, 0, 640, 900);
+	ctx.fillStyle = '#000000';
+	ctx.font = "25px Times New Roman";
+	ctx.fillText("Umbrella",100,40)
 	umbrella(ctx);
 });
 
